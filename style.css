@@ -1,0 +1,113 @@
+/* Reset simple */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0; padding: 1rem;
+  background: #f4f4f4;
+  color: #222;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  background: #121212;
+  color: #eee;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+button {
+  cursor: pointer;
+  background: #0078d7;
+  color: white;
+  border: none;
+  padding: 0.5em 0.75em;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+button:hover, button:focus {
+  background: #005a9e;
+  outline: none;
+}
+
+section {
+  margin-bottom: 1rem;
+}
+
+label {
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+select {
+  padding: 0.25em 0.5em;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+th, td {
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+thead {
+  background: #0078d7;
+  color: white;
+}
+
+body.dark thead {
+  background: #004a75;
+}
+
+#alerts {
+  padding: 1em;
+  border: 1px dashed #999;
+  background: #eaeaea;
+  font-size: 0.9rem;
+  min-height: 3em;
+}
+
+body.dark #alerts {
+  background: #222;
+  border-color: #666;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+body.dark footer {
+  color: #999;
+}
