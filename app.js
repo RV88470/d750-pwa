@@ -99,3 +99,9 @@ alertToggle.addEventListener("click", () => {
 function notify(title, body) {
   if (Notification.permission === "granted") {
     new Notification(title, { body
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./service-worker.js')
+    .then(() => console.log('Service Worker enregistré'))
+    .catch(err => console.warn('Erreur SW', err));
+}
+
