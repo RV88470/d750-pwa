@@ -104,4 +104,10 @@ if ('serviceWorker' in navigator) {
     .then(() => console.log('Service Worker enregistré'))
     .catch(err => console.warn('Erreur SW', err));
 }
+    if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./service-worker.js')
+    .then(() => console.log('Service Worker enregistré'))
+    .catch(err => console.warn('Erreur SW', err));
+}
+
 
