@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>D750 - Réglages photo</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="icons/icon-192.png" type="image/png" />
+  <script src="https://unpkg.com/suncalc@1.9.0/suncalc.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header>
+    <h1>📷 Réglages Nikon D750</h1>
+    <div class="controls">
+      <button id="themeToggle">🌓 Thème</button>
+      <button id="installBtn" hidden>📲 Installer</button>
+      <button id="toggleAlerts">🔔 Alertes : OFF</button>
+    </div>
+  </header>
+
+  <select id="filterType" aria-label="Filtrer par type de photo">
+    <option value="all">Tous les types</option>
+  </select>
+
+  <div id="alerts"></div>
+
+  <table id="settingsTable" aria-label="Tableau des réglages photo">
+    <thead>
+      <tr>
+        <th>📸 Type</th><th>⚙️ Mode</th><th>🧭 Exposition</th><th>🔧 f/</th><th>⏱️ Vitesse</th>
+        <th>🌡️ ISO</th><th>🎨 WB</th><th>🎯 AF</th><th>🔭 Focale</th><th>🧱 ND</th><th>📝 Notes</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</body>
+</html>
