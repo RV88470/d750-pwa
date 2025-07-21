@@ -5,42 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Réglages Nikon D750</title>
   <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="icons/icon-192.png" type="image/png" />
-  <script src="https://unpkg.com/suncalc@1.9.0/suncalc.js"></script>
-  <script defer src="app.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="theme-color" content="#2a2a2a" />
 </head>
 <body>
   <header>
-    <h1>📷 Réglages Nikon D750</h1>
+    <h1>Réglages recommandés Nikon D750</h1>
     <div class="controls">
-      <button id="themeToggle" aria-label="Basculer thème sombre">🌓 Thème</button>
-      <button id="installBtn" hidden aria-label="Installer l'application">📲 Installer</button>
-      <button id="toggleAlerts" aria-label="Activer/Désactiver alertes photo">🔔 Alertes : OFF</button>
+      <select id="filterType" aria-label="Filtrer par type de photo">
+        <option value="all">Tous les types</option>
+      </select>
+      <label for="toggleDarkMode" class="toggle-label">Mode sombre</label>
+      <input type="checkbox" id="toggleDarkMode" />
+      <label for="toggleReminders" class="toggle-label">Rappels photo</label>
+      <input type="checkbox" id="toggleReminders" checked />
+      <button id="installBtn" hidden>Installer l'application</button>
     </div>
   </header>
-
-  <section>
-    <label for="filterType">Filtrer par type :</label>
-    <select id="filterType" aria-label="Filtrer par type de photo">
-      <option value="all">Tous les types</option>
-    </select>
-  </section>
-
-  <section id="alerts" aria-live="polite"></section>
-
-  <table id="settingsTable" aria-label="Tableau des réglages photo">
-    <thead>
-      <tr>
-        <th>📸 Type</th><th>⚙️ Mode</th><th>🧭 Exposition</th><th>🔧 f/</th><th>⏱️ Vitesse</th>
-        <th>🌡️ ISO</th><th>🎨 WB</th><th>🎯 AF</th><th>🔭 Focale</th><th>🧱 ND</th><th>📝 Notes</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
-
-  <footer>
-    <p>© 2025 - PWA Nikon D750</p>
-  </footer>
+  <main>
+    <table id="settingsTable" aria-live="polite">
+      <thead>
+        <tr>
+          <th>Type de photo</th>
+          <th>Icône</th>
+          <th>Ouverture (f)</th>
+          <th>Vitesse (s)</th>
+          <th>ISO</th>
+          <th>Mode exposition</th>
+          <th>Focale (mm)</th>
+          <th>Filtre ND</th>
+          <th>Valeur Filtre ND</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Contenu dynamique via app.js -->
+      </tbody>
+    </table>
+  </main>
+  <script src="app.js"></script>
 </body>
 </html>
